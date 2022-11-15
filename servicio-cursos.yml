@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.22.176.1:3306/cursos?serverTimezone=UTC
+    username: root
+    password: altia00
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.22.176.1:8761/eureka
+  instance:
+#    hostname: 172.22.176.1
+#    instance-id: instancia1
+#    hostname: 172.22.176.1
+#    instance-id: instancia2
+    hostname: 172.22.176.1
+    instance-id: instancia3
+server:
+  port: 7001
